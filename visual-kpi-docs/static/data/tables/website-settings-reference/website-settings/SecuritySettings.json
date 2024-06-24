@@ -1,0 +1,14 @@
+[
+  {
+    "Attribute": "Windows Security All Access Group",
+    "Description": "Windows Security Group that grants user(s) access to all objects. (Used when Object Level Security is enabled)."
+  },
+  {
+    "Attribute": "Visual KPI Admin Group",
+    "Description": "Windows Security Group that grants user(s) admin rights to objects via the website. (Used for Trend Comments and Profile management)."
+  },
+  {
+    "Attribute": "Enable Outbound Requests",
+    "Description": "Controls whether or not outbound links (e.g. URLs, Fonts, Google APIs) are enabled (Note: Must enable to use Geo Maps)."
+  }
+]

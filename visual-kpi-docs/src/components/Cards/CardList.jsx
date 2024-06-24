@@ -1,6 +1,7 @@
 import React from 'react';
+import Card from './Card';
 
-const CardList = ({ data, Card, className, numColumns }) => {
+const CardList = ({ data, className, numColumns }) => {
 
   const setGridColumns = () => {
     if (numColumns) {
@@ -13,10 +14,17 @@ const CardList = ({ data, Card, className, numColumns }) => {
   return (
     <div className={setGridColumns()} >
       {data.map((item, index) => (
-        <Card key={index} logo={item.logo} name={item.name} linkTo={item.linkTo} externalLink={item.externalLink} />
+        <Card 
+          key={index}
+          logo={item.logo}
+          name={item.name}
+          description={item.description}
+          linkTo={item.linkTo}
+          externalLink={item.externalLink}
+        />
       ))}
     </div>
   );
 };
 
-export default CardList
+export default CardList;

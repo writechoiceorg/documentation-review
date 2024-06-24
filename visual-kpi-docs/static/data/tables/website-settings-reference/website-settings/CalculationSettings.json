@@ -1,0 +1,14 @@
+[
+  {
+    "Attribute": "Calculation Type",
+    "Description": "Controls how non numeric values in calculations are handled."
+  },
+  {
+    "Attribute": "Numeric Substitution Value",
+    "Description": "Substitution value for string results in numeric calculations. This is useful when dealing with exception data (e.g. BadValue) returned from data sources used in a calculation."
+  },
+  {
+    "Attribute": "Status Calculation",
+    "Description": "Used to determine KPI status change calculation behavior. 'Exceeds Only' = Actual is less than < a low limit or greater than > a high limit. 'Meets or Exceeds' (default) = Actual is less than < or equal to = a low limit or greater than > or equal to = a high limit."
+  }
+]

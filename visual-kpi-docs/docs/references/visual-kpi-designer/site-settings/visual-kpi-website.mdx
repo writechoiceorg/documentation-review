@@ -6,11 +6,163 @@ description: ''
 tags: ['Site Settings']
 ---
 
+import LinkCards from '@site/src/components/Cards/LinkCards';
 import table from '@site/static/data/tables/website-settings-reference/WebsiteSettings.json';
 import JsonToTable from '@site/src/components/Table/JsonToTable';
 import PngFont from '@site/src/components/PngFont/PngFont';
+import SystemServices from "@site/static/data/tables/website-settings-reference/website-settings-updated/SystemServices.json"
+import CalculationSettings from "@site/static/data/tables/website-settings-reference/website-settings-updated/CalculationSettings.json"
+import ChartTableSettings from "@site/static/data/tables/website-settings-reference/website-settings-updated/ChartTableSettings.json"
+import ColumnDefaults from "@site/static/data/tables/website-settings-reference/website-settings-updated/ColumnDefaults.json"
+import GeoMapNearMeSettings from "@site/static/data/tables/website-settings-reference/website-settings-updated/GeoMapNearMeSettings.json"
+import GroupMapSettings from "@site/static/data/tables/website-settings-reference/website-settings-updated/GroupMapSettings.json"
+import KPIBlockSettings from "@site/static/data/tables/website-settings-reference/website-settings-updated/KPIBlockSettings.json"
+import PageInformationVisibilitySettings from "@site/static/data/tables/website-settings-reference/website-settings-updated/PageInformationVisibilitySettings.json"
+import SecuritySettings from "@site/static/data/tables/website-settings-reference/website-settings-updated/SecuritySettings.json"
+import SiteBasics from "@site/static/data/tables/website-settings-reference/website-settings-updated/SiteBasics.json"
+import TabDefaults from "@site/static/data/tables/website-settings-reference/website-settings-updated/TabDefaults.json"
+import TextNumberSizeDefaults from "@site/static/data/tables/website-settings-reference/website-settings-updated/TextNumberSizeDefaults.json"
+import TimeRangeEventRangeSettings from "@site/static/data/tables/website-settings-reference/website-settings-updated/TimeRangeEventRangeSettings.json"
+import WatchlistSettings from "@site/static/data/tables/website-settings-reference/website-settings-updated/WatchlistSettings.json"
+import KPISettings from "@site/static/data/tables/website-settings-reference/website-settings-updated/KPISettings.json"
+import CommentSettings from "@site/static/data/tables/website-settings-reference/website-settings-updated/CommentSettings.json"
 
 The Website settings described on this page allow you to define basic configuration information for your Visual KPI instances. 
-You find the Website configurations under Site Settings (<PngFont name='options28' />) in the Document Actions panel.
+You find the Website configurations under Site Settings (<PngFont name='options28' />) in the Document Actions panel. Use the buttons below to access the desired category:
 
-<JsonToTable jsonData={table} />
+
+<LinkCards numColumns={4} data={
+  [
+    {
+      name: 'Site Basics',
+      linkTo: '#site-basics'
+    },
+    {
+      name: 'System Services',
+      linkTo: '#system-services'
+    },
+    {
+      name: 'Tab Defaults',
+      linkTo: '#tab-defaults'
+    },
+    {
+      name: 'Column Defaults',
+      linkTo: '#column-defaults'
+    },
+    {
+      name: 'Text, Number and Size Defaults',
+      linkTo: '#text-number-and-size-defaults'
+    },
+    {
+      name: 'Geo Map and Near Me Settings',
+      linkTo: '#geo-map-and-near-me-settings'
+    },
+    {
+      name: 'Chart & Table Settings',
+      linkTo: '#chart--table-settings'
+    },
+    {
+      name: 'Page and Information Visibility Settings',
+      linkTo: '#page-and-information-visibility-settings'
+    },
+    {
+      name: 'KPI Settings',
+      linkTo: '#kpi-settings'
+    },
+    {
+      name: 'Group Map Settings',
+      linkTo: '#group-map-settings'
+    },
+    {
+      name: 'KPI Block (Widget) Settings',
+      linkTo: '#kpi-block-widget-settings'
+    },
+    {
+      name: 'Time Range / Event Range Settings',
+      linkTo: '#time-range--event-range-settings'
+    },
+    {
+      name: 'Comment Settings',
+      linkTo: '#comment-settings'
+    },
+    {
+      name: 'Calculation Settings',
+      linkTo: '#calculation-settings'
+    },
+    {
+      name: 'Watchlist Settings',
+      linkTo: '#watchlist-settings'
+    },
+    {
+      name: 'Security Settings',
+      linkTo: '#security-settings'
+    }
+  ]
+}/>
+
+
+## Site Basics
+
+<JsonToTable jsonData={SiteBasics} />
+
+
+## System Services
+
+<JsonToTable jsonData={SystemServices} />
+
+## Tab Defaults
+
+<JsonToTable jsonData={TabDefaults} />
+
+## Column Defaults
+
+<JsonToTable jsonData={ColumnDefaults} />
+
+## Text, Number and Size Defaults
+
+<JsonToTable jsonData={TextNumberSizeDefaults} />
+
+## Geo Map and Near Me Settings
+
+<JsonToTable jsonData={GeoMapNearMeSettings} />
+
+## Chart & Table Settings
+
+<JsonToTable jsonData={ChartTableSettings} />
+
+## Page and Information Visibility Settings
+
+<JsonToTable jsonData={PageInformationVisibilitySettings} />
+
+## KPI Settings
+
+<JsonToTable jsonData={KPISettings} />
+
+## Group Map Settings
+
+<JsonToTable jsonData={GroupMapSettings} />
+
+## KPI Block (Widget) Settings
+
+<JsonToTable jsonData={KPIBlockSettings} />
+
+## Time Range / Event Range Settings
+
+<JsonToTable jsonData={TimeRangeEventRangeSettings} />
+
+## Comment Settings
+
+<JsonToTable jsonData={CommentSettings} />
+
+## Calculation Settings
+
+<JsonToTable jsonData={CalculationSettings} />
+
+## Watchlist Settings
+
+<JsonToTable jsonData={WatchlistSettings} />
+
+## Security Settings
+
+<JsonToTable jsonData={SecuritySettings} />
+

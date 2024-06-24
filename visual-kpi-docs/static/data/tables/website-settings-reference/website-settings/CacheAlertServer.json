@@ -1,0 +1,26 @@
+[
+  {
+    "Attribute": "Cache Alert Notification Protocol",
+    "Description": "Cache server error notification delivery mechanism."
+  },
+  {
+    "Attribute": "Cache Alert Reminder Interval",
+    "Description": "Controls how often (in minutes) cache server error alerts are sent to the site administrator."
+  },
+  {
+    "Attribute": "Cache Warning Interval",
+    "Description": "Determines the time (in minutes) that should elapse before displaying a site level cache failure warning (0 = always hide this warning)."
+  },
+  {
+    "Attribute": "Cache Status History Duration",
+    "Description": "Determines the time (in days) a KPI status history should be stored (Forever = keep all history). Note: A large number of Forever settings causes the size of the Visual KPI database to grow."
+  },
+  {
+    "Attribute": "Alert Warning Interval",
+    "Description": "Determines the time (in minutes) that should elapse before displaying a site level alert failure warning (0 = always hide this warning)."
+  },
+  {
+    "Attribute": "KPI Status History Storage Duration",
+    "Description": "Determines the time (in days) a KPI status history is stored."
+  }
+]

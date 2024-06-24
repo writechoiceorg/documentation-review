@@ -1,0 +1,30 @@
+[
+  {
+    "Attribute": "Default Group Map KPI Cell Count",
+    "Description": "Number of KPI cells displayed on each Group Map (1 minimum and 20 max)."
+  },
+  {
+    "Attribute": "Default Group Map Header Priority",
+    "Description": "Controls Group Map header cell behavior. Sets the header color and icon based on status: 'Recently Changed' = color of most recently changed KPI and icon to overall KPI status. 'Overall' = color of most severe KPI status and icon to most recently changed status. 'Custom Colors' = color to either the custom recently changed or not recently changed colors and no icons."
+  },
+  {
+    "Attribute": "Recently Changed Color",
+    "Description": "Group Map header color if one or more KPIs in the Group has recently changed (applies only if Custom Colors is selected for Header Priority)."
+  },
+  {
+    "Attribute": "Not Recently Changed Color",
+    "Description": "Group Map header color if no KPIs in the Group have recently changed (applies only if Custom Colors is selected for Header Priority)."
+  },
+  {
+    "Attribute": "Group Map Force Fit",
+    "Description": "Controls whether or not the Group Map will display on a single screen (no scrolling). This can cause large Group Maps to render with very small cells that are difficult to read. If the cell size gets too small text will be removed."
+  },
+  {
+    "Attribute": "Default Group Map Expansion Setting",
+    "Description": "Controls whether or not the Group Map is expanded or collapsed (header only) by default."
+  },
+  {
+    "Attribute": "Group Map Header Severity",
+    "Description": "Controls how the system calculates severity of status for use in header colors and icons. (Note: Not In Service always overrides other statuses)."
+  }
+]

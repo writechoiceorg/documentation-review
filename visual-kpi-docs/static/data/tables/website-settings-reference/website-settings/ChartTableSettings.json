@@ -1,0 +1,54 @@
+[
+  {
+    "Attribute": "Enable Trend Auto Play",
+    "Description": "Controls whether or not Trends will dynamically update."
+  },
+  {
+    "Attribute": "Maximum Large Screen Chart Cursors",
+    "Description": "Controls how many lockable cursors (10 max) are allowed on Charts displayed on screens with a horizontal resolution of 768 pixels or more."
+  },
+  {
+    "Attribute": "Maximum Small Screen Chart Cursors",
+    "Description": "Controls how many lockable cursors (10 max) are allowed on Charts displayed on screens with a horizontal resolution of 768 pixels or less."
+  },
+  {
+    "Attribute": "Show Calculations in Chart Cursors",
+    "Description": "Controls whether calculations (equations) are displayed in Chart cursors."
+  },
+  {
+    "Attribute": "Show Limits on KPI Trends",
+    "Description": "Controls whether or not to initially display limits on KPI Trends (can toggle ON/OFF)."
+  },
+  {
+    "Attribute": "Show Target on KPI Trends",
+    "Description": "Controls whether or not to initially display target on KPI Trends (can toggle ON/OFF)."
+  },
+  {
+    "Attribute": "Show Status Background on KPI Trends",
+    "Description": "Controls whether or not to initially display status bars on the background of KPI Trends (can toggle ON/OFF--requires KPI Status History Storage Duration > 0)."
+  },
+  {
+    "Attribute": "Show Gridlines on Trends",
+    "Description": "Controls whether or not gridlines are visible on Trends."
+  },
+  {
+    "Attribute": "Show Gridlines on Pareto Charts",
+    "Description": "Controls whether or not gridlines are visible on Pareto Charts."
+  },
+  {
+    "Attribute": "Show Gridlines on Bar Charts",
+    "Description": "Controls whether or not gridlines are visible on Bar Charts."
+  },
+  {
+    "Attribute": "Show Gridlines on XY Plots",
+    "Description": "Controls whether or not gridlines are visible on XY Plots."
+  },
+  {
+    "Attribute": "Scroll Increment",
+    "Description": "Length of time that timestamp-based Charts and Tables can be scrolled."
+  },
+  {
+    "Attribute": "Scroll Increment Unit",
+    "Description": "Unit of time that timestamp-based Charts and Tables can be scrolled."
+  }
+]

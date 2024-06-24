@@ -1,0 +1,42 @@
+[
+  {
+    "Attribute": "Site Title",
+    "Description": "Website title displayed in the browser title bar."
+  },
+  {
+    "Attribute": "Default Attribute Grouping",
+    "Description": "Default setting for attribute grouping of KPIs, Charts, and Tables."
+  },
+  {
+    "Attribute": "Site Administrator Contact",
+    "Description": "Visual KPI site administrator contact (also used for cache server error notifications)."
+  },
+  {
+    "Attribute": "Site Logo Link",
+    "Description": "Default link action when clicking site logos."
+  },
+  {
+    "Attribute": "Screen Data Update Interval",
+    "Description": "Controls screen data update interval (in seconds) for Web pages. Set 0 to turn off page data refresh. (Note: This should not be faster than your cache cycle as the cache time determines how often data is refreshed on the server)."
+  },
+  {
+    "Attribute": "Default Color Theme",
+    "Description": "Controls the default color theme (light or dark) for the site. Users can override this setting on each site if allowed."
+  },
+  {
+    "Attribute": "Allow Users to Change Color Theme",
+    "Description": "Determines whether or not site users can select between Dark and Light themes."
+  },
+  {
+    "Attribute": "Default Client Display Time",
+    "Description": "Controls the default display time (client time or server time) for all rendered timestamps. Site users can override this setting on each site if allowed."
+  },
+  {
+    "Attribute": "Allow Users to Change Client Display Time",
+    "Description": "Determines whether or not site users will be able to select between client and server times for all rendered timestamps."
+  },
+  {
+    "Attribute": "Garbage Collection Interval",
+    "Description": "Controls the interval (in minutes) for a full page refresh. This helps clear memory leaks--unfortunately common and not entirely unavoidable (yet) in Web applications. (Note: User actions will reset the interval. 0 = turn off this refresh)."
+  }
+]

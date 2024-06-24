@@ -10,21 +10,21 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
 
-You’ll use ODBC interfaces for connecting to a SQL database. Install and configure ODBC interfaces using Visual KPI Server Manager.
+You can use ODBC interfaces to connect to an SQL database. In this section, you will learn how to install and configure ODBC interfaces using Visual KPI Server Manager. 
 
-To use Visual KPI  with ODBC interfaces, you need to specify the connection parameters for your database and modify the SQL Scripts to reference the actual field names for SampleData, LookUp, Value, and lupd.
+To use Visual KPI  with ODBC interfaces, you need to specify the connection parameters for your database and modify the SQL Scripts to reference the actual field names for `SampleData`, `LookUp`, `Value`, and `lupd`.
 
-ODBC interfaces are made up of a Web service and two SQL scripts (GetCurrentData.sql and GetTrendData.sql). Each SQL script uses four fields, two of which are used in your KPIs:
+ODBC interfaces include a Web service and two SQL scripts (GetCurrentData.sql and GetTrendData.sql). Each SQL script uses four fields, two of which you will use to retrieve information in your KPIs:
 
 - **LookUp**: The tag name.
 - **Value**: The value associated with the tag name.
 
-The other two fields are used to find the correct value:
+The other two fields are also used to return information but do not require your interaction:
 
 - **SampleData**: The table name.
 - **lupd**: The date/time the row was last updated.
 
-:::caution
+:::note
 These are generic field names.
 :::
 
@@ -41,7 +41,7 @@ This way, the interface ensures that the KPI values displayed are accurate and r
 
 ## Configuration
 
-The ODBC interface comes with three queries, including an optional one, that require configuration. Upon installation of an ODBC interface, an example queries are automatically added. You'll need to edit these queries to fit your requirements. 
+The ODBC interface comes with three queries, including an optional one, that require configuration. Upon installation of an ODBC interface, example queries are automatically added. You'll need to edit these queries to fit your requirements.
 
 :::training
 Refer to **[Visual KPI training](https://www.transpara.com/lesson/creating-odbc-interfaces-sql-2/)** to learn all about how Visual KPI interfaces reads from thousands of data sources and how to create your own interfaces.
@@ -59,7 +59,7 @@ Visual KPI gives you the power to parameterize most data allowing you to create 
 
 ### Get Current Value Query
 
-To retrieve the current value of what you're looking for, you need to run a specific query that returns one row with two columns named Value and Date. Any additional columns or rows will be disregarded. 
+To retrieve the current value of what you're looking for, you need to run a specific query that returns one row with two columns named Value and Date. Any additional columns or rows will be disregarded.
 
 For instance, if you want to select a KPI value called DownloadPIR for a specific provider identified as Identifier, you can use this method:
 
@@ -90,7 +90,7 @@ Where `TIMESTAMP` is a [parameter](/docs/setup-and-administration/interfaces/par
 
 ### Get Trend Data Query
 
-To display the trend of a KPI, the ODBC interface of Visual KPI reads the tag name associated with a particular KPI column, such as Value, Target, Low, etc. Then, it searches the SampleData table for each row with the same tag name in the LookUp column and where the lupd (timestamp) falls within the correct time range. The time range is based on the current Trend Range in Visual KPI. Once the search is complete, the interface retrieves the Value and lupd (timestamp) from the same row and returns them to Visual KPI, which draws the trend graph.
+To display the trend of a KPI, the ODBC interface of Visual KPI reads the tag name associated with a particular KPI column, such as Value, Target, Low, etc. Then, it searches the `SampleData` table for each row with the same tag name in the `LookUp` column and where the `lupd` (timestamp) falls within the correct time range. The time range is based on the current Trend Range in Visual KPI. Once the search is complete, the interface retrieves the `Value` and `lupd` (timestamp) from the same row and returns them to Visual KPI, which draws the trend graph.
 
 ```sql
   SELECT sum(DownloadPIR) AS Value,
@@ -103,8 +103,8 @@ To display the trend of a KPI, the ODBC interface of Visual KPI reads the tag na
 
 In the query above, `STARTDATE` and `ENDDATE` are [parameters](/docs/setup-and-administration/interfaces/parameterizing) that will be replaced with actual timestamps when configuring in Visual KPI Designer to create a time range for the trend data.
 
-:::caution
-When calculating a sum, it's important to determine whether it's daily, hourly, or weekly. To handle this logic using a start and end date, you should create a query that takes these factors into account. For instance, if you request a year's worth of data, your query should sum the data on a daily basis, resulting in 365 values, one for each day. To accomplish this, you could create a parameter that allows you to choose between Daily, Hourly, and Weekly, and then use SQL logic to perform the calculation accurately.
+:::caution Using the correct data type
+When calculating a sum, it is important to determine whether to use daily, hourly, or weekly data. To handle this logic using a start and end date, you should create a query that considers these factors. For instance, if you request a year's worth of data, your query should sum the daily data, resulting in 365 values, one for each day. To accomplish this, you could create a parameter that allows you to choose between Daily, Hourly, and Weekly and then use SQL logic to perform the calculation accurately.
 :::
 
 ## Aggregate Raw Data with ODBC Interface
@@ -131,7 +131,7 @@ You can opt for an aggregation type of average with a duration of 30 minutes, fo
 
 ## Stored Procedures
 
-You can use stored procedures (sprocs) and reference them in Visual KPI Server Manager. You’ll need to return the same parameters for each query type, along with the named sproc.
+You can use stored procedures (sprocs) and reference them in Visual KPI Server Manager. You'll need to return the same parameters for each query type, along with the named sproc.
 
 - **Get Current Value**: `exec MyCurrentValueSproc {0}`
 

@@ -1,0 +1,46 @@
+[
+  {
+    "Attribute": "Default Numerical Format",
+    "Description": "Default numeric format string for KPIs and Info. Leave blank for system defaults."
+  },
+  {
+    "Attribute": "Use KPI Name as Top Text",
+    "Description": "Determines whether or not the KPI name is used by default as the KPI Map top text if no other top text has been entered."
+  },
+  {
+    "Attribute": "Use KPI Actual as Bottom Text",
+    "Description": "Determines whether or not the KPI actual value is used by default as the KPI Map bottom text if no other bottom text has been entered."
+  },
+  {
+    "Attribute": "Use KPI Description as Additional Text",
+    "Description": "Determines whether or not the KPI description is used by default as the KPI Map additional text if no other additional text has been entered."
+  },
+  {
+    "Attribute": "Lookup Text Length",
+    "Description": "Maximum length of lookup text displayed on chart cursors (0 = No lookup text displayed)."
+  },
+  {
+    "Attribute": "Maximum Group Count",
+    "Description": "Maximum number of Groups displayed. Additional Groups can be shown by clicking 'Show More' (100 max)."
+  },
+  {
+    "Attribute": "Maximum Object Count",
+    "Description": "Maximum number of KPIs, Charts, and Tables initially displayed. Additional KPIs, Charts, and Tables can be shown by clicking 'Show More' (100 max)."
+  },
+  {
+    "Attribute": "Maximum KPI Map Cell Count",
+    "Description": "Maximum number of KPIs initially displayed as a KPI Map. Additional KPIs can be shown by clicking 'Show More' (500 max)."
+  },
+  {
+    "Attribute": "Maximum Group Map Count",
+    "Description": "Maximum number of Groups initially displayed as a Group Map. Additional Groups can be shown by clicking 'Show More' (200 max)."
+  },
+  {
+    "Attribute": "Maximum Pareto Chart Bar Count",
+    "Description": "Maximum number of bars displayed for dynamic Pareto Charts given a large enough display (5 min and 50 max)."
+  },
+  {
+    "Attribute": "Profile Most Recently Used Count",
+    "Description": "Maximum number of recently used Profiles shown in profile list (3 min and 10 max)."
+  }
+]

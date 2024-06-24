@@ -25,7 +25,7 @@ After installing a new JSON interface following these [instructions](/docs/setup
 Refer to **[Visual KPI training](https://www.transpara.com/lesson/creating-json-interfaces-rest-2/)** to learn all about how Visual KPI interfaces reads from thousands of data sources and how to create your own interfaces.
 :::
 
-Any REST-based interface have some components in common that needs to be set:
+All REST-based interfaces have some components in common that need to be set:
 
 - **Base address**:  The URL to the database API.
 - **Request URI**: Specifies the Base Address and Date Time Format to traverse the JSON object and retrieve values and timestamps.
@@ -52,13 +52,13 @@ If the API doesn't require authentication, ignore this step.
 
 ### JSON Base Settings
 
-Within the interface settings, you find the JSON Base Settings, that allows you to configure:
+In the interface settings, you can find the JSON Base Settings, which allows you to configure:
 
-- **Base Address**: Configure the APIs base address.
-- **Date Time Format**: Set the datetime format of the API.
-- **Result Data Format**: Inform the type of data returned by the API (JSON or XML).
+- **Base Address**: Configure the API's base address.
+- **Date Time Format**: Set the DateTime format of the API.
+- **Result Data Format**: Inform the type of data the API returns (JSON or XML).
 
-:::tip
+:::note
 The Base Address can be [parameterized](/docs/setup-and-administration/interfaces/parameterizing).
 :::
 
@@ -97,7 +97,7 @@ To reach the needed data, you would use the dot notation as `response.data.CPU`,
 | **Value field**     | `CPU`              |
 | **Timestamp field** | `timestamp`        |
 
-:::tip
+:::note
 These fields can be [parameterized](/docs/setup-and-administration/interfaces/parameterizing).
 :::
 

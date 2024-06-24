@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import '../../css/table.css';
 
-const JsonToTable = ({ jsonData }) => {
+const JsonToTable = ({ jsonData, tableHeight }) => {
   const [filter, setFilter] = useState('');
   const [sortColumn, setSortColumn] = useState(null);
   const [sortOrder, setSortOrder] = useState('asc');
@@ -186,7 +186,7 @@ const JsonToTable = ({ jsonData }) => {
           </div>
         </div>
       </div>
-      <div className="table_container">
+      <div className="table_container" style={{ maxHeight: tableHeight }}>
         <table>
           <thead>
             <tr>{headers}</tr>

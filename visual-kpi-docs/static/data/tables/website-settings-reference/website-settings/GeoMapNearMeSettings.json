@@ -1,0 +1,22 @@
+[
+  {
+    "Attribute": "Default Near Me Distance Unit",
+    "Description": "Default unit of measure for Near Me distance."
+  },
+  {
+    "Attribute": "Default Group Geo Map Label Format",
+    "Description": "Default format of Group Geo Map labels."
+  },
+  {
+    "Attribute": "Default KPI Geo Map Label Format",
+    "Description": "Default format of KPI Geo Map labels."
+  },
+  {
+    "Attribute": "Show Geo Map Info Window On Large Screens",
+    "Description": "Controls whether or not to display the pop-up Geo Map info panels on screens with a horizontal resolution of 768 pixels or more."
+  },
+  {
+    "Attribute": "Show Geo Map Info Window On Small Screens",
+    "Description": "Controls whether or not to display the pop-up Geo Map info panel on screens with a horizontal resolution of 768 pixels or less."
+  }
+]

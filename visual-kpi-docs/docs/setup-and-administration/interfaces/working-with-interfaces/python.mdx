@@ -12,7 +12,7 @@ Python interfaces are a powerful tool for retrieving data for KPIs from any data
 
 After installing a new Python interface following these [instructions](/docs/setup-and-administration/interfaces/configuration), you are ready to configure your interface by adding your python script inside the **Python Settings** section.
 
-When creating a new Python interface, a boilerplate script is generated to provide instructions on configuring your own script. This guides you through every method you need to have so Visual KPI works properly. These methods described below:
+When creating a new Python interface, a boilerplate script is generated to provide instructions on configuring your own script. This guides you through every method you need to have so Visual KPI works properly. These methods are described below:
 
 - [`get_current_values`](#get_current_values): Returns one value and a timestamp for a metric, the most recent available.
 - [`get_historical_values`](#get_historical_values): Returns one value and a timestamp for a metric at a specified date or the closest to that date but not after.
@@ -27,7 +27,7 @@ At present, the python.net integration doesn't support f strings and typing.
 
 ### `get_current_values`
 
-The `get_current_values` method receives an dictionary as parameter and returns one value and a timestamp for most recent metric available. Below you find examples of the parameter and the expected output:
+The `get_current_values` method receives a dictionary as parameter and returns one value and a timestamp for the most recent metric available. Below you find examples of the parameter and the expected output:
 
 ```python
   parameter = {
@@ -50,7 +50,7 @@ The `get_current_values` method receives an dictionary as parameter and returns 
 
 ### `get_historical_values`
 
-The `get_historical_values` method receives an dictionary as parameter and returns one value and a timestamp for a metric at a specified date or the closest to that date but not after. Below you find examples of the parameter and the expected output:
+The `get_historical_values` method receives a dictionary as parameter and returns one value and a timestamp for a metric at a specified date or the closest to that date but not after. Below you find examples of the parameter and the expected output:
 
 ```python
   parameter = {
@@ -82,7 +82,7 @@ The `get_historical_values` method receives an dictionary as parameter and retur
 
 ### `get_trend_data`
 
-The `get_trend_data` method receives an dictionary as parameter and returns timeseries data for a metric within a time range ready for a trend (downsampled or aggregated). Below you find examples of the parameter and the expected output:
+The `get_trend_data` method receives a dictionary as parameter and returns timeseries data for a metric within a time range ready for a trend (downsampled or aggregated). Below you find examples of the parameter and the expected output:
 
 ```python
   parameter = {
@@ -112,7 +112,7 @@ The `get_trend_data` method receives an dictionary as parameter and returns time
 
 ### `get_historical_data`
 
-The `get_historical_data` method receives an dictionary as parameter and returns raw historical data (timeseries data). Below you find examples of the parameter and the expected output:
+The `get_historical_data` method receives a dictionary as parameter and returns raw historical data (timeseries data). Below you find examples of the parameter and the expected output:
 
 ```python
   parameter = {

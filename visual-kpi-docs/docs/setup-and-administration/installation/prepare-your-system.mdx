@@ -9,7 +9,7 @@ tags: ['documentation']
 import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
 import IframeComponent from '@site/src/components/Video/IframeComponent';
 
-This guide describes all needed steps to be ready to install Visual KPI Server Manager. You need to start by configuring the operating system and installing necessary software.
+This guide describes the necessary steps to be ready to install Visual KPI Server Manager. You need to start by configuring the operating system and installing the required software.
 
 The following table presents the main requirements you need to use Visual KPI Server Manager:
 
@@ -63,7 +63,7 @@ The following table presents the main requirements you need to use Visual KPI Se
 </table>
 
 :::info Windows Server
-If you don't have a Windows Server and still want to experiment with Visual KPI Server Manager, you can [install a Virtual Machine using Hyper-V](/).
+If you don't have a Windows Server and still want to experiment with Visual KPI Server Manager, you can [install a Virtual Machine using Hyper-V](/docs/setup-and-administration/installation/hyper-v).
 :::
 
 ## Step 1: .NET Framework
@@ -75,34 +75,32 @@ Your system needs to have .NET 4.5.2 or newer installed. To check your current v
 3. Validate your current version.
 
 :::note
-If your OS is Windows Server 2012 or newer, it will already have this version of .NET Framework preinstalled.
+If you are using Windows Server 2012 or newer, it will already have this version of .NET Framework preinstalled.
 :::
 
-If your system doesn't meet the needed requirement, you can download the .NET Framework directly from Windows:
+If your system doesn't have .NET 4.5.2 or newer, you can download the .NET Framework directly from Windows:
 
 - **[Microsoft .NET Framework 4.5.2 Standalone Installer](https://www.microsoft.com/en-us/download/details.aspx?id=42642)**
 
 ## Step 2: IIS Manager
 
-You need to allow ISAPI and CGI extensions to run on the web server. This step consist of accessing the IIS Manager to allow ASP.NET to run. To perform this, do these steps:
+Next, you need to allow ISAPI and CGI extensions to run on the web server. To access the IIS Manager and enable ASP.NET to run, follow these steps:
 
 1. Open the **Internet Information Services (IIS) Manager**.
 2. Select your system on the sidebar.
 3. Open the **ISAPI and CGI Restrictions** option.
 4. Allow all the ASP.NET to run by right-clicking each and selecting the **Allow** option.
 
-
-Below you find this steps exemplified:
+Below, you will find a visual guide to these steps:
 
 <StylizedImage
   imgURL="img/setup-adm/installation/prepare-your-system/iis-gif.gif"
   alt="iss setup"
 />
 
-
 ## Step 3: Windows Server Manager
 
-The first step consists of installing the correct roles in your OS's Server Manager. To  do this, follow these steps:
+Now, you must install the correct roles in your OS's Server Manager. You can do this by following these steps:
 
 1. Open your **Server Manager**.
 2. Click on Manage on the top-right corner.
@@ -118,7 +116,7 @@ The first step consists of installing the correct roles in your OS's Server Mana
     - ISS Management Console
 7. With these selected, you can **Install** and finish this wizard.
 
-Below you find this steps exemplified:
+Below, you will find a visual guide to these steps:
 
 <StylizedImage
   imgURL="img/setup-adm/installation/prepare-your-system/server-manager-gif.gif"
@@ -127,7 +125,7 @@ Below you find this steps exemplified:
 
 ## Step 4: SQL Server Management Studio
 
-Visual KPI needs a SQL service to operate properly. Your login needs to have sufficient rights to the SQL Server. This rights needs to be security admin or higher. To check this configuration, and give it the proper rights if needed, you can do these steps:
+Visual KPI needs an SQL service to operate properly. Your SQL Server login needs sufficient permissions, such as security admin or higher. To check if you already have the correct permissions or to give your login the proper permissions, you can follow these steps:
 
 1. Download and install **[Microsoft SQL Server Management Studio](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16&redirectedfrom=MSDN)**.
 2. Open the software.
@@ -140,7 +138,7 @@ Visual KPI needs a SQL service to operate properly. Your login needs to have suf
     - setupadmin
     - sysadmin
 
-Below you find this steps exemplified:
+Below, you will find a visual guide to these steps:
 
 <StylizedImage
   imgURL="img/setup-adm/installation/prepare-your-system/sql-manager-gif.gif"
@@ -149,36 +147,36 @@ Below you find this steps exemplified:
 
 ### Confirm SQL Installation and Permissions
 
-To install the Visual KPI Server and ensure that it operates as expected, you'll need SQL Server with admin or better permissions enabled.
+To install the Visual KPI Server and ensure that it operates as expected, you'll need an SQL Server with admin permissions or higher enabled.
 
 :::info
-This refers to the SQL Server database that's used by Visual KPI for all configuration information. This database is essential for Visual KPI to function correctly. It should be noted that this doesn't apply to using SQL Server as a source of data at runtime as an interface, which is also possible.
+This configuration refers to the SQL Server database that Visual KPI uses for all configuration information, and it is essential for Visual KPI to function correctly. The information in this guide doesn't apply to using SQL Server as a data source at runtime as an interface, which is also possible.
 :::
 
-Make sure you have access to SQL Server somewhere on the network or locally. You aren't required to install it locally, but Visual KPI does require that SQL Management Studio client tools be stored locally so that changes can be made or permissions can be managed.
+Make sure you have access to SQL Server somewhere on the network or locally. You aren't required to install it locally, but Visual KPI does require that SQL Management Studio client tools be stored locally in order to make changes and manage permissions.
 
-Before you start the Visual KPI installation, check your privileges on the SQL Server. The logged-in user must have certain privileges on the SQL Server as the Visual KPI Server is being installed. Because the Visual KPI database needs read and write permissions to the SQL Server, you'll need the following privileges, depending on the task:
+Before you start the Visual KPI installation, check your privileges on the SQL Server. The logged-in user must have certain privileges on the SQL Server during the Visual KPI Server installation. The logged-in SQL Server user needs different permissions for the Visual KPI database to run different tasks. The tasks and required privileges are:
 
-- **Installation of Visual KPI**: Local admin on the Windows Server machine for the installing user. For SQL Server, you must have rights to create and delete databases, execute stored procedures, add tables/views and drop tables/views.
-- **Upgrading and maintaining Visual KPI**: Local admin on the Windows Server machine for the user. For SQL Server, you must have rights to execute stored procedures, add tables/views and drop tables/views.
-- **Runtime requirements**: For the Visual KPI Server to communicate with the SQL Server database, there needs to be an account which has read and write permissions on the Visual KPI database. This account can be one of the following types:
-    - Local SQL Server account: **SQLuser**.
-    - Local machine account: **NT AUTHORITY\NETWORK SERVICE**.
-    - Domain service account: **YOUR_DOMAIN\svc_vkpi**.
+- **Installing Visual KPI**: On the Windows Server machine, the installing user must be a local admin. For the SQL Server, you must have the right to create and delete databases, execute stored procedures, add tables/views, and drop tables/views.
+- **Upgrading and maintaining Visual KPI**: On the Windows Server machine, the user must be a local admin. For SQL Server, you must have the right to execute stored procedures, add tables/views, and drop tables/views.
+- **Running Visual KPI**: For the Visual KPI Server to communicate with the SQL Server database, the account needs to have read and write permissions on the Visual KPI database. This account can be one of the following types:
+   - Local SQL Server account: **SQLuser**.
+   - Local machine account: **NT AUTHORITY\NETWORK SERVICE**.
+   - Domain service account: **YOUR_DOMAIN\svc_vkpi**.
 
-By default, Visual KPI uses **NT AUTHORITY\NETWORK SERVICE** as the account for accessing SQL Server, running IIS application pools and executing Windows Services. The is a “least privileges” account and is the preferred choice for the runtime user account with the following characteristics based on single-machine or separate machine deployment:
+By default, Visual KPI uses **NT AUTHORITY\NETWORK SERVICE** as the account for accessing SQL Server, running IIS application pools and executing Windows Services. This is a “least privileges” account and is the preferred choice for the runtime user account with the following characteristics based on single-machine or separate machine deployment:
 
-- **Single-machine**: When the Visual KPI Server and SQL Server coexist on the same Windows Server, IIS connects to SQL Server as NT AUTHORITY\NETWORK SERVICE.
+- **Single-machine**: When the Visual KPI Server and SQL Server coexist on the same Windows Server, IIS connects to SQL Server as `NT AUTHORITY\NETWORK SERVICE`.
 - **Separate machine**: When the Visual KPI Server and SQL Server are installed on separate Windows Servers, IIS connects to SQL Server as `[YOUR_DOMAIN]\[your Visual KPI server name]$` (for example, `TRANSPARA\VKPI_1$` where Transpara is the domain name and VKPI_1 is the Windows Server name).
 
-#### To confirm SQL Server permissions
+#### Confirm SQL Server permissions
 
 To confirm SQL Server permissions you need to do the following:
 
 1. Open Microsoft SQL Server Management Studio client tools.
 2. Expand Security and then expand Logins and make sure your account has sufficient rights for installing Visual KPI Server.
 3. Click on your login and check Server Roles by clicking in the Login Properties panel that opens.
-4. Make sure security admin or higher is checked, or that you meet the requirement as specified above.
+4. Make sure security admin or higher is checked, or that your login meets the requirement as specified above.
 
 ## Visual KPI Server Manager
 
