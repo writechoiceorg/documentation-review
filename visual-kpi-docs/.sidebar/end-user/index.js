@@ -14,11 +14,11 @@ module.exports = [
       id: 'end-user/core-concepts/core-concepts',
     },
     items: [
+      'end-user/core-concepts/kpi',
       'end-user/core-concepts/browser',
       'end-user/core-concepts/responsive',
       'end-user/core-concepts/real-time',
       'end-user/core-concepts/interactive',
-      'end-user/core-concepts/kpi',
     ],
   },
   {
